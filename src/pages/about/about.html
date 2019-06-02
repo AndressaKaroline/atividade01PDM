@@ -1,11 +1,33 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            About
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Name</ion-label>
+            <ion-input type="text" name="name" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Gender</ion-label>
+            <ion-input type="text" name="gender" ></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label stacked>Photo</ion-label>
+            <img src="{{ model.photo }}" />
+        </ion-item> -->
+    </ion-list>
+    <button ion-button block (click)="sendContact()">
+        Enviar contato
+    </button>
 </ion-content>
+
+<ion-footer padding>
+    <button ion-button large block (click)="takePicture()">
+        Câmera
+    </button>
+</ion-footer>
